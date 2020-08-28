@@ -1,0 +1,13 @@
+D:\GitHub\VAdm\VAdm\VAdm\VAdm-Server\bin\Debug\netcoreapp3.1\VAdm-Server.exe
+D:\GitHub\VAdm\VAdm\VAdm\VAdm-Server\bin\Debug\netcoreapp3.1\VAdm-Server.deps.json
+D:\GitHub\VAdm\VAdm\VAdm\VAdm-Server\bin\Debug\netcoreapp3.1\VAdm-Server.runtimeconfig.json
+D:\GitHub\VAdm\VAdm\VAdm\VAdm-Server\bin\Debug\netcoreapp3.1\VAdm-Server.runtimeconfig.dev.json
+D:\GitHub\VAdm\VAdm\VAdm\VAdm-Server\bin\Debug\netcoreapp3.1\VAdm-Server.dll
+D:\GitHub\VAdm\VAdm\VAdm\VAdm-Server\bin\Debug\netcoreapp3.1\VAdm-Server.pdb
+D:\GitHub\VAdm\VAdm\VAdm\VAdm-Server\obj\Debug\netcoreapp3.1\VAdm-Server.csprojAssemblyReference.cache
+D:\GitHub\VAdm\VAdm\VAdm\VAdm-Server\obj\Debug\netcoreapp3.1\VAdm-Server.AssemblyInfoInputs.cache
+D:\GitHub\VAdm\VAdm\VAdm\VAdm-Server\obj\Debug\netcoreapp3.1\VAdm-Server.AssemblyInfo.cs
+D:\GitHub\VAdm\VAdm\VAdm\VAdm-Server\obj\Debug\netcoreapp3.1\VAdm-Server.csproj.CoreCompileInputs.cache
+D:\GitHub\VAdm\VAdm\VAdm\VAdm-Server\obj\Debug\netcoreapp3.1\VAdm-Server.dll
+D:\GitHub\VAdm\VAdm\VAdm\VAdm-Server\obj\Debug\netcoreapp3.1\VAdm-Server.pdb
+D:\GitHub\VAdm\VAdm\VAdm\VAdm-Server\obj\Debug\netcoreapp3.1\VAdm-Server.genruntimeconfig.cache
