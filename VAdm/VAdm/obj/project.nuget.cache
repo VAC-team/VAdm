@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Tz5Mq92DLusrdBi20Pr7awKp5HCxAFm/jpy9AKDTlZDG0/y/a9piCAd1/Vlh56x0ntk3R3Js2iM4MkvGK0viDg==",
+  "dgSpecHash": "N0WM8Wze2/9XBZ2PYoe5wv68z78o8EBT32PBVNxSWbmMggk4Zniog3wOxGzZ5VEpmzq1vCXtQEs4+xWxFNBNvw==",
   "success": true,
   "projectFilePath": "D:\\GitHub\\VAdm\\VAdm\\VAdm\\VAdm\\VAdm.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
