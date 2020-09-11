@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
+using System.Net;
 
 namespace VAdm
 {
@@ -16,8 +17,11 @@ namespace VAdm
         static string name, password;
         static bool isGeneral, isLeader, isComander, isWorker;
 
-        public static bool Login(string name, string passwors)
+        public static bool Login(string name, string password)
         {
+            WebRequest qwerty = WebRequest.Create("http\\:127.0.0.1\\" + name + " " + password);
+            qwerty.GetResponse();
+
             return false;
         }
 
@@ -48,7 +52,7 @@ namespace VAdm
             workers = new Tree();
         }
 
-        public static string[] listOfTaks()
+        public static string[] listOfTasks()
         {
             return null;
         }
