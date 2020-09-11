@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
 using System.Net;
+using System.IO;
+using System.Net.Sockets;
 
 namespace VAdm
 {
@@ -47,7 +49,7 @@ namespace VAdm
             }
             catch (WebException exc)
             {
-                if(exc.InnerException.GetType() -- typeof(SocketException))
+                if(exc.InnerException.GetType() == typeof(SocketException))
                 {
                     Console.WriteLine(Project);
                 }
@@ -62,6 +64,8 @@ namespace VAdm
                 int i = st.ReadByte();
                 if (i == -1) break;
             }
+
+            return null;
         }
 
         public static void Project(out string Name, out string FunDoc, out string TechDoc, out DateTime date, out int progress, out Tree workers)
