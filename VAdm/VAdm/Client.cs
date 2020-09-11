@@ -33,9 +33,31 @@ namespace VAdm
             Status = true;
         }
 
-        public static string[] listOfProjects()
+        public static string[] listOfProjects(string Project)
         {
-            return null;
+            WebRequest req = WebRequest.Create("http://127.0.0.1" + Project);
+            WebResponse res = null;
+            try
+            {
+                res = req.GetResponse();
+            }
+            catch (WebException exc)
+            {
+                if(exc.InnerException.GetType() -- typeof(SocketException))
+                {
+                    Console.WriteLine(Project);
+                }
+                else
+                {
+                    Console.WriteLine("");
+                }
+            }
+            Stream st = res.GetResponseStream();
+            while (true)
+            {
+                int i = st.ReadByte();
+                if (i == -1) break;
+            }
         }
 
         public static void Project(out string Name, out string FunDoc, out string TechDoc, out DateTime date, out int progress, out Tree workers)
