@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
 using System.Net;
+using System.IO;
+using System.Net.Sockets;
 
 namespace VAdm
 {
@@ -37,8 +39,32 @@ namespace VAdm
             Status = true;
         }
 
-        public static string[] listOfProjects()
+        public static string[] listOfProjects(string Project)
         {
+            WebRequest req = WebRequest.Create("http://127.0.0.1" + Project);
+            WebResponse res = null;
+            try
+            {
+                res = req.GetResponse();
+            }
+            catch (WebException exc)
+            {
+                if(exc.InnerException.GetType() == typeof(SocketException))
+                {
+                    Console.WriteLine(Project);
+                }
+                else
+                {
+                    Console.WriteLine("");
+                }
+            }
+            Stream st = res.GetResponseStream();
+            while (true)
+            {
+                int i = st.ReadByte();
+                if (i == -1) break;
+            }
+
             return null;
         }
 
