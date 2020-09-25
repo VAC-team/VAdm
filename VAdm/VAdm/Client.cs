@@ -39,9 +39,10 @@ namespace VAdm
             Status = true;
         }
 
-        public static string[] listOfProjects(string Project)
+        public static string[] listOfProjects()
         {
-            WebRequest req = WebRequest.Create("http://127.0.0.1" + Project);
+            string streamString = "";
+            WebRequest req = WebRequest.Create("http://127.0.0.1" + "Projects");
             WebResponse res = null;
             try
             {
@@ -49,23 +50,17 @@ namespace VAdm
             }
             catch (WebException exc)
             {
-                if(exc.InnerException.GetType() == typeof(SocketException))
-                {
-                    Console.WriteLine(Project);
-                }
-                else
-                {
-                    Console.WriteLine("");
-                }
+                throw new Exception(exc.Message);
             }
             Stream st = res.GetResponseStream();
             while (true)
             {
                 int i = st.ReadByte();
                 if (i == -1) break;
+                streamString += (char)i;
             }
-
-            return null;
+            string[] output = streamString.Split(" ");
+            return output;
         }
 
         public static void Project(out string Name, out string FunDoc, out string TechDoc, out DateTime date, out int progress, out Tree workers)
@@ -80,7 +75,26 @@ namespace VAdm
 
         public static string[] listOfTasks()
         {
-            return null;
+            string streamString = "";
+            WebRequest req = WebRequest.Create("http://127.0.0.1" + "Tasks");
+            WebResponse res = null;
+            try
+            {
+                res = req.GetResponse();
+            }
+            catch (WebException exc)
+            {
+                throw new Exception(exc.Message);
+            }
+            Stream st = res.GetResponseStream();
+            while (true)
+            {
+                int i = st.ReadByte();
+                if (i == -1) break;
+                streamString += (char)i;
+            }
+            string[] output = streamString.Split(" ");
+            return output;
         }
     }
 }
