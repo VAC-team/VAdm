@@ -42,15 +42,15 @@ namespace VAdm
         public static string[] listOfProjects()
         {
             string streamString = "";
-            WebRequest req = WebRequest.Create("http://127.0.0.1" + "Projects");
+            WebRequest req = WebRequest.Create("http://127.0.0.1//Projects//" + name + "_" + password);
             WebResponse res = null;
             try
             {
                 res = req.GetResponse();
             }
-            catch (WebException exc)
+            catch (WebException)
             {
-                throw new Exception(exc.Message);
+                throw;
             }
             Stream st = res.GetResponseStream();
             while (true)
