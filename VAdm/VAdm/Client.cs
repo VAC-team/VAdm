@@ -21,7 +21,7 @@ namespace VAdm
 
         public static bool Login(string name, string password)
         {
-            WebRequest qwerty = WebRequest.Create("http\\:127.0.0.1\\" + name + " " + password);
+            WebRequest qwerty = WebRequest.Create("http://127.0.0.1/login/" + name + " " + password);
             qwerty.GetResponse();
 
             return false;
@@ -42,7 +42,7 @@ namespace VAdm
         public static string[] listOfProjects()
         {
             string streamString = "";
-            WebRequest req = WebRequest.Create("http://127.0.0.1//Projects//" + name + "_" + password);
+            WebRequest req = WebRequest.Create("http://127.0.0.1/Projects/" + name + "_" + password);
             WebResponse res = null;
             try
             {
@@ -76,7 +76,7 @@ namespace VAdm
         public static string[] listOfTasks()
         {
             string streamString = "";
-            WebRequest req = WebRequest.Create("http://127.0.0.1" + "Tasks");
+            WebRequest req = WebRequest.Create("http://127.0.0.1/task/" + "Tasks");
             WebResponse res = null;
             try
             {
